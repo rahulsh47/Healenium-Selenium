@@ -1,0 +1,92 @@
+2024-04-29 15:11:58.873  INFO 1 - [       main] c.epam.healenium.Application     : Starting Application v3.4.4 using Java 17.0.10 with PID 1 (/healenium-backend.jar started by root in /) 
+2024-04-29 15:11:58.877  INFO 1 - [       main] c.epam.healenium.Application     : No active profile set, falling back to 1 default profile: "default" 
+2024-04-29 15:12:00.235  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2024-04-29 15:12:00.474  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228 ms. Found 4 JPA repository interfaces. 
+2024-04-29 15:12:01.439  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port 7878 (http) 
+2024-04-29 15:12:01.457  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2024-04-29 15:12:01.458  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/10.1.18] 
+2024-04-29 15:12:01.529  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2024-04-29 15:12:01.529  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2524 ms 
+2024-04-29 15:12:01.928  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2024-04-29 15:12:02.195  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2024-04-29 15:12:02.345  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2024-04-29 15:12:03.038  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2024-04-29 15:12:03.091  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2024-04-29 15:12:03.329  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2024-04-29 15:12:03.331  INFO 1 - [       main] liquibase.command                : Using deploymentId: 4392723331 
+2024-04-29 15:12:03.334  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2024-04-29 15:12:03.378  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/001_createSequence.xml::3::nkobzev 
+2024-04-29 15:12:03.387  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2024-04-29 15:12:03.389  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 9ms 
+2024-04-29 15:12:03.401  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/002_selector.xml::5::nkobzev 
+2024-04-29 15:12:03.413  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2024-04-29 15:12:03.415  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 13ms 
+2024-04-29 15:12:03.421  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/002_selector.xml::6::nkobzev 
+2024-04-29 15:12:03.479  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2024-04-29 15:12:03.481  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 59ms 
+2024-04-29 15:12:03.490  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/003_healing.xml::7::nkobzev 
+2024-04-29 15:12:03.500  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2024-04-29 15:12:03.502  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 11ms 
+2024-04-29 15:12:03.508  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/003_healing.xml::8::nkobzev 
+2024-04-29 15:12:03.545  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2024-04-29 15:12:03.554  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2024-04-29 15:12:03.556  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 47ms 
+2024-04-29 15:12:03.566  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/004_healingResult.xml::9::nkobzev 
+2024-04-29 15:12:03.579  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2024-04-29 15:12:03.581  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 14ms 
+2024-04-29 15:12:03.587  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/004_healingResult.xml::10::nkobzev 
+2024-04-29 15:12:03.628  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2024-04-29 15:12:03.633  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2024-04-29 15:12:03.635  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 46ms 
+2024-04-29 15:12:03.641  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/005_report.xml::11::nkobzev 
+2024-04-29 15:12:03.648  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2024-04-29 15:12:03.650  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 8ms 
+2024-04-29 15:12:03.655  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/005_report.xml::12::nkobzev 
+2024-04-29 15:12:03.692  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2024-04-29 15:12:03.693  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 37ms 
+2024-04-29 15:12:03.699  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/006_command_and_healingenable_column.xml::13::nkobzev 
+2024-04-29 15:12:03.705  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2024-04-29 15:12:03.707  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 7ms 
+2024-04-29 15:12:03.719  INFO 1 - [       main] liquibase.util                   : UPDATE SUMMARY 
+2024-04-29 15:12:03.720  INFO 1 - [       main] liquibase.util                   : Run:                         10 
+2024-04-29 15:12:03.720  INFO 1 - [       main] liquibase.util                   : Previously run:               0 
+2024-04-29 15:12:03.720  INFO 1 - [       main] liquibase.util                   : Filtered out:                 0 
+2024-04-29 15:12:03.720  INFO 1 - [       main] liquibase.util                   : ------------------------------- 
+2024-04-29 15:12:03.720  INFO 1 - [       main] liquibase.util                   : Total change sets:           10 
+2024-04-29 15:12:03.721  INFO 1 - [       main] liquibase.util                   : Update summary generated 
+2024-04-29 15:12:03.725  INFO 1 - [       main] liquibase.command                : Update command completed successfully. 
+2024-04-29 15:12:03.725  INFO 1 - [       main] liquibase.ui                     : Liquibase: Update has been successful. Rows affected: 10 
+2024-04-29 15:12:03.730  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2024-04-29 15:12:03.731  INFO 1 - [       main] liquibase.command                : Command execution complete 
+2024-04-29 15:12:03.971  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2024-04-29 15:12:04.165  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 6.4.1.Final 
+2024-04-29 15:12:04.252  INFO 1 - [       main] o.h.c.i.RegionFactoryInitiator   : HHH000026: Second-level cache disabled 
+2024-04-29 15:12:04.880  INFO 1 - [       main] .o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer 
+2024-04-29 15:12:04.948  WARN 1 - [       main] org.hibernate.orm.deprecation    : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2024-04-29 15:12:06.978  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2024-04-29 15:12:06.985  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+2024-04-29 15:12:06.989  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2024-04-29 15:12:07.663  INFO 1 - [       main] o.s.d.j.r.q.QueryEnhancerFactory : Hibernate is in classpath; If applicable, HQL parser will be used. 
+2024-04-29 15:12:08.661  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2024-04-29 15:12:09.871  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2024-04-29 15:12:10.025  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 7878 (http) with context path '' 
+2024-04-29 15:12:10.227  INFO 1 - [       main] c.epam.healenium.Application     : Started Application in 12.203 seconds (process running for 13.065) 
+2024-04-29 15:16:00.404  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-04-29 15:16:00.404  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2024-04-29 15:16:00.406  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 2 ms 
+2024-04-29 15:22:37.558  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(twotabsearchtextbox) 
+2024-04-29 15:22:48.179  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.cssSelector(.nav-input.nav-progressive-attribute:nth-child(1)) 
+2024-04-29 15:22:49.867  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//div[contains(@class,'rush-component s-featured-result-item')]//span[@class='a-size-medium a-color-base a-text-normal'][contains(text(),'GoPro HERO12 Waterproof Action Camera with Front &')]) 
+2024-04-29 15:22:55.075  INFO 1 - [7878-exec-5] healenium                        : [Get Reference] Request: RequestDto(locator=input[name='proceedToRetailCheckout'], className=pages.proceedToBuy, methodName=ClickProceedToCheckout, command=findElement, url=https://www.amazon.in/GoPro-Waterproof-HyperSmooth-AutoBoost-International/dp/B0CGRHHGBH/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.Cj2Hhn13W9RXrDUnxoBpHpQSfrEpTt0BWpZSO8rtQyO42X31O6alHdt3ANqVx6cyMxYRx1ekSz3A9itfgJT2RO1Jw8nep0W9qymHXyLJX9ubyxiAgQ0C3QhF7xa5q3N6g9p4iRbou2nQffpiiVHyfyMVvCioHjB-xHziBUnNkJ1a9L97bYDPUP-cS75sK4A4yaXD5Dh3G6MBwYXKwWuYO9pW6TMMr2HXjsok7f4KdqE.Nf-LC7wg261hmr4llQQyy9gEvzoPz4GOJrlLllT1AVw&dib_tag=se&keywords=Gopro&qid=1714393368&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)) 
+2024-04-29 15:23:28.317  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.id(twotabsearchtextbox) 
+2024-04-29 15:23:32.058  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.cssSelector(.nav-input.nav-progressive-attribute:nth-child(1)) 
+2024-04-29 15:23:33.971  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//div[contains(@class,'rush-component s-featured-result-item')]//span[@class='a-size-medium a-color-base a-text-normal'][contains(text(),'GoPro HERO12 Waterproof Action Camera with Front &')]) 
+2024-04-29 15:23:38.516  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.cssSelector(#mbb-offeringID-1) 
+2024-04-29 15:23:39.238  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.cssSelector(#add-to-cart-button) 
+2024-04-29 15:23:41.582  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.cssSelector(input[name='proceedToRetailCheckout']) 
+2024-04-29 15:29:32.665  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(twotabsearchtextbox) 
+2024-04-29 15:30:31.032  INFO 1 - [7878-exec-3] healenium                        : [Get Reference] Request: RequestDto(locator=.nav-input.nav-progressive-attribute:nth-child(1), className=pages.searchTab, methodName=SearchButton, command=findElement, url=https://www.amazon.in/s?k=Gopro&ref=nb_sb_noss)) 
+2024-04-29 15:30:35.533  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//div[contains(@class,'rush-component s-featured-result-item')]//span[@class='a-size-medium a-color-base a-text-normal'][contains(text(),'GoPro HERO12 Waterproof Action Camera with Front &')]) 
+2024-04-29 15:30:39.839  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.cssSelector(#mbb-offeringID-1) 
+2024-04-29 15:30:40.094  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.cssSelector(#add-to-cart-button) 
+2024-04-29 15:30:44.098  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.cssSelector(input[name='proceedToRetailCheckout']) 
