@@ -11,7 +11,7 @@ Healenium improves stability of Selenium-based test cases, handling changes of u
 ```
 ## Healing Report
 ![image](https://github.com/rahulsh47/Healenium-Selenium/assets/152846008/cc2e2d14-36ac-451a-b820-e3b813cac3f6)
-# Selector Healed
+## Selectors Healed
 ![image](https://github.com/rahulsh47/Healenium-Selenium/assets/152846008/462cb73a-1acc-42bb-9bf2-5077c07b4900)
 ## Command to Pull Images of the Locators to the Docker Desktop
 ```
